@@ -71,10 +71,11 @@ export default function Department() {
 
             let data = await response.json();
             setDeptPortfolioData(data.data)
+            console.log(data)
         }
 
         const curriculum = async () => {
-            let response = await fetch("http://localhost:8012/api/connection.php?curriculum=" + deptContent.branch, {
+            let response = await fetch("https://gpsakoli.ac.in/public/api/connection.php?curriculum=" + deptContent.branch, {
                 method: "GET"
             });
 
@@ -82,7 +83,7 @@ export default function Department() {
             setCurriculumData(data.data)
         }
         const irg = async () => {
-            let response = await fetch("http://localhost:8012/api/connection.php?irg=" + deptContent.branch, {
+            let response = await fetch("https://gpsakoli.ac.in/public/api/connection.php?irg=" + deptContent.branch, {
                 method: "GET"
             });
 
@@ -91,7 +92,7 @@ export default function Department() {
             console.log(data.data);
         }
         const timeTable = async () => {
-            let response = await fetch("http://localhost:8012/api/connection.php?timeTable=" + deptContent.branch, {
+            let response = await fetch("https://gpsakoli.ac.in/public/api/connection.php?timeTable=" + deptContent.branch, {
                 method: "GET"
             });
 
@@ -100,7 +101,7 @@ export default function Department() {
             console.log(data.data);
         }
         const resultAnalysis = async () => {
-            let response = await fetch("http://localhost:8012/api/connection.php?resultAnalysis=" + deptContent.branch, {
+            let response = await fetch("https://gpsakoli.ac.in/public/api/connection.php?resultAnalysis=" + deptContent.branch, {
                 method: "GET"
             });
 
@@ -109,7 +110,7 @@ export default function Department() {
             console.log(data.data);
         }
         const eventAnalysis = async () => {
-            let response = await fetch("http://localhost:8012/api/connection.php?eventAnalysis=" + deptContent.branch, {
+            let response = await fetch("https://gpsakoli.ac.in/public/api/connection.php?eventAnalysis=" + deptContent.branch, {
                 method: "GET"
             });
 

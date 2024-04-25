@@ -3,10 +3,10 @@ import React from "react";
 const ImgCard = ({ image, text = '', authorName = '', subject = '', department = '', path = '' }) => {
   return (
     <>
-      <a href={'http://localhost:8012' + path} target="_blank" className='card flex-center'>
+      <a href={'https://gpsakoli.ac.in' + path} target="_blank" className='card flex-center'>
         <div className='card-img'>
 
-          <img src={`http://localhost:8012/` + image} alt="Card" />
+          <img src={`https://gpsakoli.ac.in/` + image} alt="Card" />
           <div className={'content'}>
             <p>{text}</p>
           </div>

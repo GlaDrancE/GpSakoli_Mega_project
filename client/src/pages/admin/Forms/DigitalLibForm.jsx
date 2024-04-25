@@ -22,7 +22,7 @@ function DigitalLibraryForm() {
 
         // Make the fetch POST request
         fetch(
-            "http://localhost:8012/api/connection.php?action=insertDigitalLib",
+            "https://gpsakoli.ac.in/public/api/connection.php?action=insertDigitalLib",
             {
                 method: "POST",
                 body: formData,

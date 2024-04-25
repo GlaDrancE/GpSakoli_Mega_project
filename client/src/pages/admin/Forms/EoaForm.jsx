@@ -13,7 +13,7 @@ function EoaForm() {
 
         // Make the fetch POST request
         fetch(
-            "http://localhost:8012/api/connection.php?action=insertEoaForm",
+            "https://gpsakoli.ac.in/public/api/connection.php?action=insertEoaForm",
             {
                 method: "POST",
                 body: formData,

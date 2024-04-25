@@ -13,7 +13,7 @@ function NewsletterForm() {
     formData.append("department", department);
     formData.append("newsletterPdf", newsletterPdf); // Assuming newsletterPdf is a File object
     // Make the fetch POST request
-    fetch("http://localhost:8012/api/connection.php?action=insertNewsletter", {
+    fetch("https://gpsakoli.ac.in/public/api/connection.php?action=insertNewsletter", {
       method: "POST",
       body: formData,
     })

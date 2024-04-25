@@ -95,6 +95,16 @@ const link5 = [
         ]
     }
 ]
+const link6 = [
+    {
+        headings: 'Achievements of GPS',
+        content: [
+            { contentTitle: "Researches By Faculty", contentUrl: '/' },
+            { contentTitle: "Patents Of Faculties", contentUrl: '/' },
+            { contentTitle: "Publications By GPS", contentUrl: '/' },
+        ]
+    }
+]
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
     const [showMobileNav, setShowMobileNav] = useState({ opacity: '0', top: '0', height: '0' })
@@ -149,7 +159,7 @@ export default function Header() {
                         <MobileNav url='#' link='Alumni' ddcontent={link5} />
                     </div>
                     <div>
-                        <MobileNav url='#' link='Research, Publication and Patents' ddcontent={link1} />
+                        <MobileNav url='#' link='Research, Publication and Patents' ddcontent={link6} />
                     </div>
                 </nav>
                 <div className="logo-header flex justify-between text-white px-8 py-4">
@@ -199,7 +209,7 @@ export default function Header() {
                             <Dropdown url='#' link='Alumni' ddcontent={link5} />
                         </div>
                         <div>
-                            <Dropdown url='#' link='Research, Publication and Patents' ddcontent={link1} />
+                            <Dropdown url='#' link='Research, Publication and Patents' ddcontent={link6} />
                         </div>
                     </ul>
                 </nav>

@@ -16,7 +16,7 @@ function PortfolioDataForm() {
 
         // Make the fetch POST request
         fetch(
-            "http://localhost:8012/api/connection.php?action=insertDeptPortfolio",
+            "https://gpsakoli.ac.in/public/api/connection.php?action=insertDeptPortfolio",
             {
                 method: "POST",
                 body: formData,
@@ -30,12 +30,13 @@ function PortfolioDataForm() {
             })
             .then((data) => {
                 // Handle success response
+                alert("Success:", data);
                 console.log("Success:", data);
                 return true;
             })
             .catch((error) => {
                 // Handle error
-                console.error("Error:", error);
+                alert("Error:", error);
                 return false;
             });
     };
@@ -57,9 +58,9 @@ function PortfolioDataForm() {
                     >
 
                         <option value="">Select Session</option>
+                        <option value="2021-2022">2021-2022</option>
                         <option value="2022-2023">2022-2023</option>
                         <option value="2023-2024">2023-2024</option>
-                        <option value="2024-2025">2023-2024</option>
                         {/* Add more options as needed */}
                     </select>
                 </div>

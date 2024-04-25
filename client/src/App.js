@@ -28,20 +28,9 @@ import GPSInNews from './pages/GPSInNews'
 
 
 
-const Layout = ({ children }) => {
-  return (
-    <>
-      <Top_header />
-      {children}
-      <Footer />
-    </>
-  );
-
-}
-
-
 function App() {
   const { progress, setProgress } = useState(0);
+
   return (
     <>
       <Router>
@@ -53,7 +42,7 @@ function App() {
           <Route path='/dept/:branch/:content' element={<Department />}></Route>
           <Route path='/facilities/:facility' element={<Facilities />}></Route>
           <Route path='/about-institute/:page' element={<About />}></Route>
-          <Route path='/library' element={<UnderDevelopment />}></Route>
+          <Route path='/underdevelopment' element={<UnderDevelopment />}></Route>
           <Route path='/confirm-admission' element={<AdmissionConfirmation />}></Route>
           <Route path='/alumni/registration-form' element={<AlumniRegistrationForm />}></Route>
           <Route path='/students-corner/:page' element={<StudentCorner />}></Route>

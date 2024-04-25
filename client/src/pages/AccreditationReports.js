@@ -22,7 +22,7 @@ export const AccreditationReports = () => {
     useEffect(() => {
 
         const auditReport = async () => {
-            let response = await fetch("http://localhost:8012/api/connection.php?auditReport", {
+            let response = await fetch("http://localhost:8012/public/api/connection.php?auditReport", {
                 method: "GET"
             });
 
@@ -31,7 +31,7 @@ export const AccreditationReports = () => {
             console.log(data.data);
         }
         const monitoringReport = async () => {
-            let response = await fetch("http://localhost:8012/api/connection.php?monitoringReport", {
+            let response = await fetch("http://localhost:8012/public/api/connection.php?monitoringReport", {
                 method: "GET"
             });
 

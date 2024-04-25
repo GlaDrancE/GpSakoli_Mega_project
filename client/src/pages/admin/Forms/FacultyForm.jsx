@@ -7,7 +7,7 @@ function FacultyForm() {
 	const [image, setImage] = useState();
 	const [designation, setDesignation] = useState("");
 	const [qualification, setQualification] = useState("");
-	const [teachingExperience, setTeachingExperience] = useState("");
+	const [experience, setExperience] = useState("");
 	const [contactNumber, setContactNumber] = useState("");
 
 	const handleSubmit = (event) => {
@@ -20,11 +20,11 @@ function FacultyForm() {
 		formData.append("staffImg", image); // Assuming image is a File object
 		formData.append("designation", designation);
 		formData.append("qualification", qualification);
-		formData.append("teachingExperience", teachingExperience);
+		formData.append("experience", experience);
 		formData.append("phone", contactNumber);
 		// Make the fetch POST request
 		fetch(
-			"http://localhost:8012/api/connection.php?action=insertFacultyDetails",
+			"https://gpsakoli.ac.in/public/api/connection.php?action=insertFacultyDetails",
 			{
 				method: "POST",
 				body: formData,
@@ -173,7 +173,7 @@ function FacultyForm() {
 					<label
 						className="block text-gray-700 mb-2"
 						htmlFor="teaching_experience">
-						Teaching Experience (Years)
+						Experience (Years)
 					</label>
 					<input
 						required
@@ -182,9 +182,9 @@ function FacultyForm() {
 						name="teaching-experience"
 						type="number"
 						placeholder="Enter your teaching experience in years"
-						value={teachingExperience}
+						value={experience}
 						onChange={(event) =>
-							setTeachingExperience(event.target.value)
+							setExperience(event.target.value)
 						}
 					/>
 				</div>

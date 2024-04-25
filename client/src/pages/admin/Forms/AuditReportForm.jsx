@@ -14,7 +14,7 @@ function AuditReportForm() {
 
     // Make the fetch POST request
     fetch(
-      "http://localhost:8012/api/connection.php?action=insertAuditReport",
+      "https://gpsakoli.ac.in/public/api/connection.php?action=insertAuditReport",
       {
         method: "POST",
         body: formData,
@@ -24,12 +24,11 @@ function AuditReportForm() {
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
-        return response.json();
+        return response.text();
       })
       .then((data) => {
         // Handle success response
-
-        alert(data.message);
+        alert(data);
         return true;
       })
       .catch((error) => {

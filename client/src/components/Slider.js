@@ -17,7 +17,11 @@ import { Autoplay, EffectFade, Navigation, Pagination, EffectCreative, EffectCov
 import image1 from '../images/welcome.jpg'
 import image2 from '../images/c1.jpg'
 import image3 from '../images/c2.jpg'
-import image4 from '../images/c3.jpg'
+import image5 from '../images/c4.png'
+import image6 from '../images/c5.jpg'
+import image7 from '../images/c6.jpg'
+import image8 from '../images/c7.jpg'
+import image9 from '../images/c8.jpg'
 
 
 
@@ -52,8 +56,13 @@ const images = [
     src: image1, alt: 'First Image', msg: 'Welcome to Government Polytechnic Sakoli'
   },
   { src: image2, alt: 'Second Image', msg: 'Tree Plantation' },
-  { src: image3, alt: 'Third Image', msg: 'Fire extinguisher Experiment' },
-  { src: image4, alt: 'Fourth Image', msg: 'Clicknet training' },
+  { src: image3, alt: 'Third Image', msg: '' },
+  // { src: image4, alt: 'Fourth Image', msg: '' },
+  { src: image5, alt: 'Fifth Image', msg: '' },
+  { src: image6, alt: 'Sixth Image', msg: '' },
+  { src: image7, alt: 'Seventh Image', msg: 'Industrial Visit At Clicknet' },
+  { src: image8, alt: 'Eight Image', msg: '' },
+  { src: image9, alt: 'Ninth Image', msg: 'Fire Safty Training By Expert' },
 ]
 
 

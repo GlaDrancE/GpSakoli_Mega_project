@@ -5,7 +5,7 @@ const DigitalLibrary = () => {
     const [books, setBook] = useState([]);
     useEffect(() => {
         const fetchBook = async () => {
-            let response = await fetch("http://localhost:8012/api/connection.php?digital-library", {
+            let response = await fetch("https://gpsakoli.ac.in/api/connection.php?digital-library", {
                 method: "GET"
             });
 

@@ -3,8 +3,6 @@ import { Slider, News_slider, Department_slider } from '../components/Slider'
 import Image_Background from "../components/Image_Background";
 import Vision_Mission from "../components/Vision_Mission";
 import Recruiters from "../components/Recruiters";
-import Footer from "../components/Footer";
-import Preloader from "../components/Preloader";
 import { Link } from 'react-router-dom'
 import galleryImg1 from '../images/college-images/one.jpg'
 import galleryImg2 from '../images/college-images/two.jpg'
@@ -29,6 +27,7 @@ const notices = [
     { url: '#', msg: 'Admission Process Started 2023-24(Marathi)' },
     { url: '#', msg: 'Admission Process Started 2023-24(Marathi)' },
 ]
+//Change Images from here
 const galleryImages = [
     galleryImg1,
     galleryImg2,

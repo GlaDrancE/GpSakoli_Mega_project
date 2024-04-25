@@ -4,7 +4,7 @@ import SideMenu from '../components/SideMenu'
 import { useParams } from 'react-router-dom'
 import Recruiters from '../components/Recruiters'
 import Footer from '../components/Footer'
-import Table from '../components/Table'
+import { Table } from '../components/Table'
 
 
 export const TrainingPlacements = () => {

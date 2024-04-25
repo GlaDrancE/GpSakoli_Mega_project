@@ -59,7 +59,7 @@ export function CollapseDropdown(props) {
                     </span>
                 </div>
                 <div className={`collapse-dd-body w-full h-screen ${showCD && 'showcd'}`}>
-                    <iframe src={'http://localhost:8012' + props.data.path} frameborder="0" className='w-full h-full'></iframe>
+                    <iframe src={'https://gpsakoli.ac.in' + props.data.path} frameborder="0" className='w-full h-full'></iframe>
                 </div>
             </div>
         </>

@@ -12,7 +12,7 @@ function MonitoringReportForm() {
         formData.append("reportPdf", reportPdf); // Assuming reportPdf is a File object
 
         // Make the fetch POST request
-        fetch("http://localhost:8012/api/connection.php?action=insertMonitoringReport", {
+        fetch("https://gpsakoli.ac.in/public/api/connection.php?action=insertMonitoringReport", {
             method: "POST",
             body: formData,
         })

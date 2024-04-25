@@ -18,7 +18,7 @@ function ResultAnalysisForm() {
 
         // Make the fetch POST request
         fetch(
-            "http://localhost:8012/api/connection.php?action=insertResultAnalysisDetails",
+            "https://gpsakoli.ac.in/public/api/connection.php?action=insertResultAnalysisDetails",
             {
                 method: "POST",
                 body: formData,
@@ -58,9 +58,9 @@ function ResultAnalysisForm() {
                         name="session"
                     >
                         <option value="">Select Session</option>
+                        <option value="2021-2022">2021-2022</option>
                         <option value="2022-2023">2022-2023</option>
                         <option value="2023-2024">2023-2024</option>
-                        <option value="2024-2025">2023-2024</option>
                         {/* Add more options as needed */}
                     </select>
                 </div>

@@ -17,7 +17,7 @@ function StudentListForm() {
         formData.append("studentList", studentList); // Assuming studentList is a File object
         // Make the fetch POST request
         fetch(
-            "http://localhost:8012/api/connection.php?action=insertStudentList",
+            "https://gpsakoli.ac.in/public/api/connection.php?action=insertStudentList",
             {
                 method: "POST",
                 body: formData,

@@ -167,6 +167,26 @@ ol>li {
   margin-bottom: 1rem;
 }
 
+.table td {
+  position: relative;
+}
+
+.table td:after {
+  content: "";
+  left: 0%;
+  z-index: -1;
+  position: absolute;
+  width: 0;
+  height: 100%;
+  top: 0;
+  transition: width .4s;
+  background: var(--card-linear-red);
+}
+
+.table td:hover:after {
+  width: 100% !important;
+}
+
 /* .active {
   } */
 @keyframes fade-bottom {

@@ -4,7 +4,7 @@ export default function GPSInNews() {
     const [newses, setNewses] = useState([]);
     useEffect(() => {
         const fetchNews = async () => {
-            let response = await fetch("http://localhost:8012/api/connection.php?gps-newses", {
+            let response = await fetch("http://localhost:8012/public/api/connection.php?gps-newses", {
                 method: "GET"
             });
 
@@ -27,7 +27,7 @@ export default function GPSInNews() {
 
                         <div className="news-card" style={{ width: '300px' }}>
                             <div style={{ width: '300px', height: '300px' }}>
-                                <img src={'http://localhost:8012/' + news.news_article_image} alt="" className='w-full h-full' style={{ objectFit: 'cover' }} />
+                                <img src={'http://localhost:8012/public/' + news.news_article_image} alt="" className='w-full h-full' style={{ objectFit: 'cover' }} />
                             </div>
                             <div className="date text-right">
                                 {news.date_of_event}

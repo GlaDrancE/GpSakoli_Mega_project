@@ -1,6 +1,6 @@
 import React from "react";
 import StaffComponent from "../StaffComponent";
-import {useParams} from "react-router-dom";
+import { useParams } from "react-router-dom";
 export default function DeptPortfolio(props) {
 	const branch = useParams();
 	console.log(props);
@@ -9,7 +9,7 @@ export default function DeptPortfolio(props) {
 			<h2 className="heading-top-left-line">
 				<span className="heading-red">Faculty</span> Profile
 			</h2>
-			<div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-12">
+			<div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-12">
 				{props.faculty.map(
 					(i, index) =>
 						i.branch === branch.branch && (

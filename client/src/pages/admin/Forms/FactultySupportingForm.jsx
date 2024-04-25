@@ -24,7 +24,7 @@ function FacultySupportingForm() {
         formData.append("phone", contactNumber);
         // Make the fetch POST request
         fetch(
-            "http://localhost:8012/api/connection.php?action=insertSupportingFacultyDetails",
+            "https://gpsakoli.ac.in/public/api/connection.php?action=insertSupportingFacultyDetails",
             {
                 method: "POST",
                 body: formData,

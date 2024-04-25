@@ -14,7 +14,7 @@ function CurriculamForm() {
     formData.append("syllabusPdf", syllabusPdf); // Assuming syllabusPdf is a File object
 
     // Make the fetch POST request
-    fetch("http://localhost:8012/api/connection.php?action=insertCurriculamDetails", {
+    fetch("https://gpsakoli.ac.in/public/api/connection.php?action=insertCurriculamDetails", {
       method: "POST",
       body: formData,
     })

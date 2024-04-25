@@ -2,12 +2,12 @@ import React from 'react'
 export default function StaffComponent(props) {
   return (
     <div>
-      <div className="lg:max-w-md md:max-w-md mt-8 staffComp">
+      <div className="lg:max-w-sm md:max-w-md mt-8 staffComp">
         <div className="relative overflow-hidden">
           {/* <!-- Half-covered image --> */}
           <div className="h-12 from-gray-200 to-transparent absolute top-0 left-0 right-0"></div>
           <div className="w-full h-64 bg-black">
-            <img src={`http://localhost:8012/` + props.staffimages.image} alt="Image" className=" h-full object-contain mx-auto" />
+            <img src={`https://gpsakoli.ac.in/` + props.staffimages.image} alt="Image" className=" h-full object-contain mx-auto" />
           </div>
           {/* <!-- Card content --> */}
           <div className="bg-white rounded-lg shadow-lg relative">
@@ -19,7 +19,7 @@ export default function StaffComponent(props) {
               <li>Qualification : {props.staffimages.qualification}</li>
               <li>Experience : {props.staffimages.TeachingExperience} Years</li>
               <li>Contact No. : {props.staffimages.contact}</li>
-              <li>Detailed Bio Data. : {props.staffimages.detailedBio}</li>
+              <li>Email : {props.staffimages.email}</li>
             </ul>
           </div>
         </div>

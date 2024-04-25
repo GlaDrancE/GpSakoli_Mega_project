@@ -45,7 +45,7 @@
     content: '';
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.777), transparent, transparent);
     /* z-index: 99; */
     position: absolute;
     top: 0;
@@ -1182,6 +1182,31 @@ th {
     bottom: 50% !important;
 }
 
+#google_translate_element span {
+    display: none !important;
+}
+
+.skiptranslate {
+    display: flex;
+    overflow: hidden;
+    min-width: 153px;
+    width: 153px;
+}
+
+/* .goog-te-combo {
+    width: 153px
+} */
+.goog-te-combo {
+    width: 152px;
+}
+
+.VIpgJd-ZVi9od-ORHb-OEVmcd {
+    width: 100% !important;
+}
+
+#goog-gt-tt {
+    display: none;
+}
 
 @media (max-width: 768px) {
     .card {

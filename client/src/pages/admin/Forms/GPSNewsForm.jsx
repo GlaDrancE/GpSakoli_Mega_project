@@ -15,7 +15,7 @@ function GPSNewsForm() {
     formData.append("newsArticleImage", newsArticleImage);
     formData.append("dateOfEvent", dateOfEvent);
     // Make the fetch POST request
-    fetch("http://localhost:8012/api/connection.php?action=insertGPSNews", {
+    fetch("https://gpsakoli.ac.in/public/api/connection.php?action=insertGPSNews", {
       method: "POST",
       body: formData,
     })

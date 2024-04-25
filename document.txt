@@ -1,0 +1,269 @@
+"I have to write some instructions about the project in the report, so help me with that."
+
+<Introduction>
+In that project I used MERN Stack to create whole things which is shifted into (Mysql, Php, React) stack due to some issues in server., The project is GP Sakoli College official website. So first let's discuss work flow of this project. First I've created a design with Figma, and I've used references of gpnagpur.ac.in, gpamravati.ac.in, gppune.ac.in, iitd.ac.in, ghrce.raisoni.net to create our website. with figma I've redesign all the pages which include, the home page, department page, college about page, facilities page, training and placements page, student corner, committee page, alumni registration form, student confirmation registration form, etc.
+Key Highlights:
+1. React-Powered Agility:
+A lightning-fast, user-friendly interface ensures an efficient browsing experience for students, faculty, and visitors.
+2. Node.js Backend Excellence:
+Our backend, powered by Node.js, guarantees responsiveness, handling diverse requests seamlessly.
+3. Figma-Infused Design:
+Figma's collaborative design platform fuels our visually appealing and intuitive interface.
+Goals:
+- Enhanced User Experience: Prioritizing simplicity and speed for easy information access.
+- Accessibility Focus: Adhering to accessibility standards for an inclusive digital space.
+- Centralized Information Hub: Streamlining data for students, faculty, and visitors.
+((((((use these points to create a detailed introduction for this project, you can create subpoints in introduction if it suits on it)))))
+
+<Problem in old site> 
+Design of old site is really messy and not user friendly, it has many flaws like incomplete and incorrect data, some pages did not works correctly, and loading of page really slow, all these issues solved in this new website and by using react router the speed of website increases. The old website did not have any database so that website was not storing any data, but with our new website integrated database it can store large amount of data. In this new website I've also created a admin panel so that admin can make changes in the website easily unlike before admin don't need to touch the code it can edit the website content by using admin panel, this panel allows even a layman to operate website.
+
+<Purpose of new website>
+------write it on your own by reading introductino and problem in old site--------
+
+
+<Resources Used>
+Hardware Requirement
+1) Computer system with minimum 8 GB RAM 
+2) Processor of minimum AMD Ryzen 3 3300U with Radeon Vega Mobile Gfx
+Software Requirement
+1) Operating system: windows 10 or higher
+2) Any Editor based Software like Visual studio code
+3) Any browser which supports Client-side Scripting Language .
+4) Any online hosting services like Godaddy.com.
+
+
+<Technologies used>
+In this project the deceided technology was MERN but due to issues in server and incompatibility of server to accept nodejs and mongodDB database leads me to change the technological stack from MERN to (PHP, MYsql, React) Stack. Design used in website is created with the help of figma, this design as mentioned above is take reference from many college website including home.iitd.ac.in, gpnagpur.ac.in, gppune.ac.in, etc. Server used in this project is Godaddy Shared hosting server, with phpMysql Database
+
+
+<Stage 2>
+There are various tools that provide figma design to code, I've used one of the tool called Locofy.ai to convert these design to react code but due to imperfection of the ai tool, I've recreated/rewrite the react.js code, the begining of react application is with `npx create-react-app GPSakoliSite` this command created a basic structure of react application in GPSakoliSite folder.
+Initially after executing this command in cmd it provided such resources listed below
+GPSakoliSite
+├── README.md 
+├── node_modules 
+├── package.json 
+├── .gitignore 
+├── public 
+└── src
+these files and folder role are as follows: 
+README.md -> provide readme file which describe about project
+node_modules -> folder which contains all the necessary packages and dependencies that will be used in project
+package.json -> package.json holds important data about project, it stores information version name and list dependencies required by application in human readable format. It stores data into json format
+.gitignore -> This file contains data about directories of files, which will be ignored when the code will be pushed on github.com
+public -> this folder contain public resources which will be on client side like index.html file
+src -> this folder contain all the source code which will be used in website, futher all the react component and all assets will be inside this src folder. 
+
+This completes our GPSakoliSite folder. (Note: this folder i.e GPSakoliSite will be renamed as 'client' when backend is involved).
+
+
+<Stage 3>
+In this site all the component source code is inside 'src' folder its intial structure as follows (Before making changes in default template)
+`
+src
+|- App.js
+|- App.css
+|- App.test.js
+|- index.js
+|- logo.svg
+|- reportWebVitals.js
+
+Intially 'create-react-app' provides a demo Application, In react application 'App.js' is main component which used to render all the child component in react app. 
+App.js: Main component defining the structure and logic of the React application.
+App.css: Stylesheet for styling the components defined in App.js.
+App.test.js: Test suite for testing the functionality of App.js.
+index.js: Entry point for rendering the React application into the DOM.
+logo.svg: SVG image used as a logo or graphical element within the application.
+reportWebVitals.js: Utility for reporting web vitals metrics to a backend for performance monitoring.
+
+
+run this application using `npm start` command
+
+<Stage 4>
+First the folder is created called 'components' which contains all the components used in this web applicaiton. The 'pages' folder is created which contains all the main pages of the website, these are two  main folders used in the project.
+structure of components and pages folder given below: 
+
+components
+|- 
+|-
+|-
+|-
+|-
+|-
+|-
+|- 
+
+pages
+|- 
+|-
+|-
+|-
+|-
+|-
+|-
+
+other folder are assets folders which contain images, pdfs, fonts
+
+<Stage 5>
+Intially, before building backend the data was stored inside local variable in json format.
+React uses react-router-dom to move from one page to another, All the routes are set inside App.js
+<<<route image from App.js>>>
+Whole application contains common components which are used in multiple pages-
+Top_Header.js
+Header.js
+Slider.js
+Footer.js
+
+Every page strcuture contains these components (except Student Admission Confirmation Form and Alumni Registration Form [there is no Slider.jsx in those forms]).
+Components can be Identifieid by their names, like Vision_Mission.js is creating a box of Vision and mission, Recruitment.js creates companies slider, etc.
+ 
+Details about components is given below:
+Dropdown.js
+Footer.js
+Header.js
+Image_Background.js
+ImageViewer.js
+MobileNav.js
+Preloader.js
+Recruiters.js
+Slider.js
+SocialmediaIcon.js
+StaffComponent.js
+Table.js
+TimetableForm.jsx
+Top_header.js
+UnderDevelopment.js
+Vissoin_Mission.js
+
+
+
+<Stage 6>
+CSS:
+the css is applied with the help of using tailwind.css, to install tailwind css steps are given below: -
+install tailwind package: `npm install tailwindss'
+and import the `@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';` in primary css file.
+This will applied tailwind css in the application.
+Application css contain into four parts:
+1.src/ tailwind css (included using `tailwindcss` package)
+2. src/style.css -> custom css folder which contains custom css for all pages
+3. src/global.css -> contains fonts and colors with some static classes which are used in various components of application
+4. src/media-query.css-> This file contains responsive css for all pages
+Along with this there is also inline css used in various component.
+
+<Stage 7>
+With the help fo jsx and tailwind css, this completes front-end of website. After creating frontend, its time to create backend. 
+Backend of website is created with Nodejs and expressjs, with mongodb database.
+Backend of application need resources to download
+1. nodejs
+2. npm
+3. mongodb
+
+backend of website is build inside server folder, at this stage the name of GPSakoliSite folder is renamed to 'client'. Now we have two folders 1. client 2. server
+Directory structure of server is given below:
+
+In server folder main file is server.js which contain backend code.
+server.js uses external packages listed below
+express
+mysql
+body-parser
+path
+cors
+dotenv
+
+
+as we discuss above all these package is installed inside node_modules and information is kept inside package.json.
+
+.env file is used to store critical informatio like database URI, database Password, targeted database, etc
+directory structure of server folder is given below
+server
+|- server.js
+|- .env
+|- package.json
+|- package-lock.json
+|- node_modules
+
+In server.js the api endpoints are build to send and fetch data from database.
+these api endpoints can be seen in server.js. 
+
+<Stage 8>
+After setting up api end points, we need to setup database. Database called gpsDatabase is created with mongodb compass this database contains collections of different data, this collections include: 
+staff
+supporting_staff
+labs
+
+
+
+every collection stores data of various department, they are categorized by key 'branch'. Later on this database is fully converted from mongodb database to mysql database due to some server issue discussed further.
+
+ earlier the database was stored completely in the mongodb compass(a tool created by MongoDB that gives you a visual way to explore and work with your data). But with the new technology i proposed i' ve used mongo atlas. it has a property of having a remote database as compare to the earlier one compass having local database.
+
+replaced the local mongodb uri with new mongodb atlas uri with id password, the uri of mongodb uri looks like this: mongodb+srv://<username>:<password>@testing.bssnwkk.mongodb.net/?retryWrites=true&w=majority&appName=testing										
+All these details stored inside .env file in server folder.
+
+<stage 9>
+server hosting:
+the hosting server provided called godaddy has shared hosting server which is operated by c-panel. About  hosting the react website on the server we need to create a build folder. This folder is created by executing a command `npm run build`. the structure of this build folder is given below:
+
+
+<<<structure image>>>
+
+
+
+
+process to host a website on godaddy using c-panel:
+1. create a build folder using command `npm run build`.
+2. select all files of build folder and compress it.
+3. open c-panel and in there click to file manager
+4. upload compressed build folder and goto public_html/public.
+5. extract that folder 
+
+this will host the front-end of website created in react.
+
+backend is still not set up, to setup backend we need to create folder called server in public_html (public_html/server)
+In server folder we need to upload of our backend i.e (server.js, package.json, .env)
+
+after uploading these file we need to enable ssh of the godaddy server, to enable this follow the below steps
+1. Login to godaddy server
+2. select profile and click the 'My Products'
+3. Click on 'Manage' in web hosting
+4. In settings corner click on 'Server'
+5. Click on SSH access 'manage'
+6. Turn it on, set password and use it in terminal using `ssh <username>@<ip_address>`
+
+Enable the ssh and access it through command prompt or you can download 'putty'
+Putty is a software which is used to access server using ssh by entering ip address and password of server.
+To use putty, download putty from https://www.putty.org/
+install it and use it directly.
+Or Cpanel also provide its terminal to access linux machine on server.
+
+
+<Stage 10>
+After setting up the server with all necessary files and ssh enabled, I've accessed the ssh terminal of server. First thing need to do is to install node js and npm to server to run node application.
+To install node application in node follow the below steps:
+1. Access the ssh terminal 
+2. run this command in `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash`
+3. Once NVM is installed, you can install Nodejs to see all the version run this command: `nvm ls-remote`
+4. To install node js run command: `nvm install <node_version>` in our application we are using v11.15.0 (Higher version of node js is not supported to our machine)
+5. nvm alias default v11.15.0
+
+This set up our node js and npm you can check them by using
+`node -v`
+`npm -v`
+
+After installing node js and npm 
+Locate to folder public_html/server (where our backend is stored)
+run `node server.js`
+
+When I run this program for the first time it gives an error, our application was successfully live but it is not connecting with Mongodb Atlas, In mongodb Atlas we need allow specific IP Address to access database, To make it enable first Log In to Mongodb Atlas, select project and database, click to 'Network Access' this will open a page which contains all the IP Address allowed to access database, click on 'Add IP Address' and paste the server IP address to it.
+
+But after completing this step, and making the all requirements satisfied our application were still not connecting with Mongodb Atlas database. After making lots of changes in code and tried to connecting the database. 
+
+Finally I've decided to host the backend on different server, I've used render.com this provide free hosting service, which provide builtin node environment. This method was successful and database was working perfectly but our college website is dependent on external source, which can be shutdown and our whole site will note work.
+
+Site works perfectly for few days, but then there was issue to be dependent on another third party source, So because of connectivity issue with mongodb, I converted the whole database to mysql database.
+
+I used phpMyAdmin mysql provided by Cpanel, with this I've prepared whole new database called as 'gpsdatabase' with the help of php my admin, This database contains same tables as the collections created inside Mongodb.
+
