@@ -15,7 +15,6 @@ import { useParams } from 'react-router-dom';
 import Preloader from '../components/Preloader';
 import DeptEventAnalysis from '../components/department-components/DeptEventAnalysis';
 export default function Department() {
-    const [staffData, setStaffData] = useState([])
     const [labsData, setLabsData] = useState([])
     const [supportingStaffData, setSupportingStaffData] = useState([])
     const [deptPortfolioData, setDeptPortfolioData] = useState([])
@@ -40,14 +39,6 @@ export default function Department() {
         { name: 'Internal Revenue Generation', path: '/dept/' + deptContent.branch + '/internal-revenue-generation' },
     ]
     useEffect(() => {
-        const staffData = async () => {
-            let response = await fetch("https://gpsakoli.ac.in/public/api/connection.php?staff-details", {
-                method: "GET"
-            });
-
-            let data = await response.json();
-            setStaffData(data.data)
-        }
         const labsData = async () => {
             let response = await fetch("https://gpsakoli.ac.in/public/api/connection.php?labs=" + deptContent.branch, {
                 method: "GET"
@@ -126,37 +117,35 @@ export default function Department() {
         deptPortfolio();
         supportingStaffData();
         labsData();
-        staffData();
+        // staffData();
     }, [])
     return (
         <>
             <Slider />
-            {!staffData ? <Preloader /> :
-                <div className="main-container">
+            <div className="main-container">
 
-                    <div className="text-center">
-                        <h1 className='heading'>Department of {deptContent.branch == 'computer' ? 'Computer technology' : deptContent.branch == 'civil' ? 'Civil Engineering' : deptContent.branch == 'electrical' ? 'Electrical Engineering' : deptContent.branch == 'mechanical' ? 'Mechanical Engineering' : 'Electronics and Tele. Comm. Engineering'} </h1>
-                        <h1 className='heading heading-red'>{deptContent.branch !== "electronics" && "NBA Accredited"}</h1>
-                    </div>
-                    <div className="dynamic-container">
-                        <div className="dynamic-change-container">
-                            {deptContent.content === 'about-department' && <DeptAbout />}
-                            {deptContent.content === 'department-portfolio' && <DeptPortfolio data={deptPortfolioData} />}
-                            {deptContent.content === 'digital-library' && <DigitalLibrary />}
-                            {deptContent.content === 'faculties' && <DeptFaculty faculty={staffData} supportingStaff={supportingStaffData} />}
-                            {deptContent.content === 'curriculum' && <DeptCurriculum curriculum={curriculumData} />}
-                            {deptContent.content === 'result-analysis' && <DeptResultAnalysis data={resultAnalysis} />}
-                            {deptContent.content === 'event-analysis' && <DeptEventAnalysis data={eventAnalysis} />}
-                            {deptContent.content === 'laboratories' && <DeptLaboratory LabsData={labsData} />}
-                            {deptContent.content === 'time-table' && <DeptTimeTable data={timeTable} />}
-                            {deptContent.content === 'news-letter' && <DeptNewsLetter />}
-                            {deptContent.content === 'internal-revenue-generation' && <DeptIRG data={irg} />}
-
-                        </div>
-                        <SideMenu links={deptMenuLinks} />
-                    </div>
+                <div className="text-center">
+                    <h1 className='heading'>Department of {deptContent.branch == 'computer' ? 'Computer technology' : deptContent.branch == 'civil' ? 'Civil Engineering' : deptContent.branch == 'electrical' ? 'Electrical Engineering' : deptContent.branch == 'mechanical' ? 'Mechanical Engineering' : 'Electronics and Tele. Comm. Engineering'} </h1>
+                    <h1 className='heading heading-red'>{deptContent.branch !== "electronics" && "NBA Accredited"}</h1>
                 </div>
-            }
+                <div className="dynamic-container">
+                    <div className="dynamic-change-container">
+                        {deptContent.content === 'about-department' && <DeptAbout />}
+                        {deptContent.content === 'department-portfolio' && <DeptPortfolio data={deptPortfolioData} />}
+                        {deptContent.content === 'digital-library' && <DigitalLibrary />}
+                        {deptContent.content === 'faculties' && <DeptFaculty supportingStaff={supportingStaffData} />}
+                        {deptContent.content === 'curriculum' && <DeptCurriculum curriculum={curriculumData} />}
+                        {deptContent.content === 'result-analysis' && <DeptResultAnalysis data={resultAnalysis} />}
+                        {deptContent.content === 'event-analysis' && <DeptEventAnalysis data={eventAnalysis} />}
+                        {deptContent.content === 'laboratories' && <DeptLaboratory LabsData={labsData} />}
+                        {deptContent.content === 'time-table' && <DeptTimeTable data={timeTable} />}
+                        {deptContent.content === 'news-letter' && <DeptNewsLetter />}
+                        {deptContent.content === 'internal-revenue-generation' && <DeptIRG data={irg} />}
+
+                    </div>
+                    <SideMenu links={deptMenuLinks} />
+                </div>
+            </div>
         </>
     )
 }

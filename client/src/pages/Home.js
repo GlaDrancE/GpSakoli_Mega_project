@@ -128,7 +128,7 @@ export default function Home() {
                     <div className="news-paper-card border-card reveal">
                         <h1 className="text-center font-bold">GP Sakoli In <span className="heading-red">News</span></h1>
                         <div className="news-container">
-                            <Link to="/gpInNews">
+                            <Link to="/gps-in-news">
                                 <img src={news} alt="" />
                             </Link>
                         </div>

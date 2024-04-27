@@ -89,6 +89,7 @@ export const Dashboard = () => {
 		monitoringReport: ['Session', 'PDF', 'Actions'],
 		committees: [''],
 		eoa: ['Session', 'PDF', 'Actions'],
+		eoa: ['Department', 'PDF', 'Actions'],
 		news: ['Session', 'News Title', 'News Artical Image', 'Date of Event', 'Actions'],
 		digitalLibrary: ['Subject Name', 'Department', "Title Of Book", "Author Name", "Book PDF", 'Cover Page Image', 'Actions'],
 		resultAnalysis: ['Session', 'Department', 'Odd Sem Result', 'Even Sem Result', 'Actions'],

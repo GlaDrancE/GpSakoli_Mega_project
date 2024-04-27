@@ -35,7 +35,7 @@ export default function StaffTable({ fetched_data, fetchedData, onDelete, onEdit
 										<td className="px-2 py-1 whitespace-nowrap">
 											<img
 												src={
-													`https://gpsakoli.ac.in/` +
+													`https://gpsakoli.ac.in` +
 													data.image
 												}
 												alt={data.name}

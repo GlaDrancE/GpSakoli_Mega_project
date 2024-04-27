@@ -3,7 +3,7 @@ import './App.css';
 import Slider from './components/Slider'
 import Dropdown from './components/Dropdown';
 import Top_header from './components/Top_header'
-import React, { Component, useState } from 'react';
+import React, { Component, useState, useEffect } from 'react';
 import {
   BrowserRouter as Router,
   Routes,
@@ -25,15 +25,27 @@ import { GrievancesCommittee } from './pages/GrievancesCommittee';
 import AlumniRegistrationForm from './pages/AlumniRegistration';
 import AdminLogin from './pages/admin/AdminLogin';
 import GPSInNews from './pages/GPSInNews'
+import Preloader from './components/Preloader.js'
+import preloader from './images/loading.gif'
 
 
 
 function App() {
-  const { progress, setProgress } = useState(0);
-
+  const [loading, setLoading] = useState(true)
+  useEffect(() => {
+    window.addEventListener('load', () => {
+      setLoading(false);
+      console.log(loading);
+    })
+  }, []);
   return (
     <>
       <Router>
+        <>
+          {loading && <div className="preloader bg-white">
+            <img src={preloader} width={70} height={70} alt="" />
+          </div>}
+        </>
         {!window.location.href.includes('/admin-login/') && <Top_header />}
         <LoadingBar color='bincludeslack' progress={100} shadow={true} height={4} />
         <Routes>
